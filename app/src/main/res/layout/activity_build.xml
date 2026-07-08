@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A1628"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔨 Build APK"
+        android:textSize="24sp"
+        android:textColor="#00CCFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvStatus"
+        android:text="Ready"
+        android:textColor="#88CCDD"
+        android:textSize="14sp"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/etZip"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter ZIP for build"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#668899"
+        android:background="@drawable/input_bg"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnBuild"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="📦 Build APK"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/btn_build"
+        android:radius="8dp"
+        android:layout_marginBottom="12dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressTint="#00CCFF"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tvLog"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Build logs...\n"
+        android:textColor="#668899"
+        android:textSize="10sp"
+        android:fontFamily="monospace"
+        android:background="#0A1628"
+        android:padding="12dp"
+        android:radius="8dp"
+        android:scrollbars="vertical" />
+
+</LinearLayout>

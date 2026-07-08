@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A1628">
+
+    <!-- 3D Spline Background -->
+    <LinearLayout
+        android:id="@+id/llSpline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/spline_bg">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="AutoFix Build"
+                android:textSize="24sp"
+                android:textColor="#00CCFF"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed" />
+
+            <Button
+                android:id="@+id/btnSettings"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="⚙️"
+                android:background="@drawable/ic_settings"
+                android:onClick="openSettings"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnProfile"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="👤"
+                android:background="@drawable/ic_profile"
+                android:onClick="showProfile"/>
+
+        </LinearLayout>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔧 AutoFix Build"
+            android:textSize="32sp"
+            android:textColor="#00CCFF"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-condensed" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Build APK Otomatis + Auto Fix Error"
+            android:textSize="14sp"
+            android:textColor="#88CCDD"
+            android:layout_marginBottom="30dp" />
+
+        <!-- 3D Spline View -->
+        <ImageView
+            android:id="@+id/ivSpline"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_spline"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Form -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="#1A2538"
+            android:radius="16dp"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GitHub Repository"
+                android:textColor="#88CCDD"
+                android:textSize="12sp"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/etRepo"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="username/repo"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#668899"
+                android:background="@drawable/input_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Branch"
+                android:textColor="#88CCDD"
+                android:textSize="12sp"
+                android:layout_marginBottom="4dp" />
+
+            <EditText
+                android:id="@+id/etBranch"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="main"
+                android:text="main"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#668899"
+                android:background="@drawable/input_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="🔑 Login GitHub"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/btn_primary"
+                android:radius="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btnBuild"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="🚀 Start Build"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/btn_build"
+                android:radius="8dp"
+                android:enabled="false" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:visibility="gone"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:progressTint="#00CCFF"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status: Ready"
+                android:textColor="#88CCDD"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- Log -->
+        <TextView
+            android:id="@+id/tvLog"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:text="Logs will appear here...\n"
+            android:textColor="#668899"
+            android:textSize="10sp"
+            android:fontFamily="monospace"
+            android:background="#0A1628"
+            android:padding="12dp"
+            android:layout_margin="20dp"
+            android:radius="8dp"
+            android:scrollbars="vertical" />
+
+    </LinearLayout>
+
+</LinearLayout>

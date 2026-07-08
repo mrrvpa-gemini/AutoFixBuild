@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0A1628"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⚙️ Settings"
+        android:textSize="24sp"
+        android:textColor="#00CCFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎨 Theme"
+        android:textSize="18sp"
+        android:textColor="#88CCDD"
+        android:layout_marginBottom="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="24dp">
+
+        <Button
+            android:id="@+id/btnThemeDark"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#121212"
+            android:radius="30dp"
+            android:layout_margin="8dp"
+            android:text=""
+            android:onClick="setThemeDark"/>
+
+        <Button
+            android:id="@+id/btnThemeLight"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#FFFFFF"
+            android:radius="30dp"
+            android:layout_margin="8dp"
+            android:text=""
+            android:onClick="setThemeLight"/>
+
+        <Button
+            android:id="@+id/btnThemeBlue"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#0A1628"
+            android:radius="30dp"
+            android:layout_margin="8dp"
+            android:text=""
+            android:onClick="setThemeBlue"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="👤 @Rvpa_official"
+        android:textSize="16sp"
+        android:textColor="#00CCFF"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvCreator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Creator: Rvpa.official"
+        android:textSize="14sp"
+        android:textColor="#88CCDD" />
+
+</LinearLayout>
